@@ -1,12 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/Diarselimi/go-todo/models"
+)
 
 func main() {
-	u := models.User{
-		ID:        2,
-		FirstName: "Tricia",
-		LastName:  "McMillan",
+	me := models.User{
+		ID:        1,
+		FirstName: "Test",
+		LastName:  "Selimi",
 	}
-	fmt.Println("Here we GO!")
+	fmt.Println("Here we GO!", me)
 }
