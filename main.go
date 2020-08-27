@@ -2,15 +2,17 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 
-	"github.com/Diarselimi/go-todo/models"
+	"github.com/Diarselimi/go-todo/controllers"
 )
 
 func main() {
-	me := models.User{
-		ID:        1,
-		FirstName: "Test",
-		LastName:  "Selimi",
-	}
-	fmt.Println("Here we GO!", me)
+	controllers.RegisterControllers()
+	startWebServer()
+}
+
+func startWebServer() {
+	fmt.Println("Listening on port 3000")
+	http.ListenAndServe(":3000", nil)
 }
