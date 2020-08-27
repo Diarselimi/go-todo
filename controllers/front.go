@@ -8,6 +8,7 @@ import (
 func RegisterControllers() {
 	uc := newUserController()
 	tc := newTodoController()
+
 	http.Handle("/users", *uc)
 	http.Handle("/users/", *uc)
 	http.Handle("/todos", *tc)
